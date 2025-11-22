@@ -1,0 +1,8 @@
+🔑 Key Customizations
+Region: Update provider "aws" to your preferred AWS region.
+
+Image URI: Replace with your actual ECR repo URI.
+
+Ports: Adjust containerPort and ingress rules if your app uses a different port.
+
+Roles: Ensure IAM roles exist or let Terraform create them.
