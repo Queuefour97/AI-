@@ -1,1 +1,12 @@
 aws ecs register-task-definition --cli-input-json file://ecs-task-def.json
+🚀 Next Steps
+Save this file as ecs-task-def.json in your repo.
+
+Update placeholders (ARNs, repo URI, ports).
+
+Register the task definition with AWS CLI:
+
+bash
+aws ecs register-task-definition --cli-input-json file://ecs-task-def.json
+Reference this task definition in your GitHub Actions ECS workflow (ecs-deploy.yml).
+
