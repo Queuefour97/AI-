@@ -1,0 +1,14 @@
+🔑 Key Fields to Customize
+family → Name of your ECS task definition.
+
+cpu / memory → Adjust based on workload (512 CPU units ≈ 0.5 vCPU, 1024 MB memory).
+
+executionRoleArn / taskRoleArn → Replace with your IAM role ARNs.
+
+image → Replace with your ECR image URI.
+
+portMappings → Match your app’s exposed port (e.g., FastAPI default 8000).
+
+environment → Add any environment variables your app needs.
+
+logConfiguration → Ensure CloudWatch Logs group exists.
