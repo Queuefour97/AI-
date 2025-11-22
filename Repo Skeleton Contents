@@ -1,0 +1,70 @@
+📂 Repo Skeleton Contents
+1. ml-foundations/
+notebooks/exploratory_analysis.ipynb – starter notebook for EDA
+
+data/ – placeholder for datasets
+
+models/ – trained model outputs
+
+README.md – overview of foundational ML work
+
+2. computer-vision/
+src/train.py – starter CNN training script
+
+data/ – image datasets
+
+models/ – saved weights
+
+README.md – project notes
+
+3. nlp-project/
+src/train.py – Hugging Face fine‑tuning script
+
+deployment/app.py – FastAPI endpoint starter
+
+deployment/Dockerfile – containerization template
+
+.github/workflows/deploy.yml – CI/CD pipeline starter
+
+README.md – NLP project overview
+
+4. mlops-pipeline/
+pipeline/pipeline.py – ML pipeline skeleton
+
+mlflow/ – configs for experiment tracking
+
+terraform/main.tf – AWS IaC starter
+
+scripts/ – utility scripts
+
+README.md – pipeline documentation
+
+5. aws-cert-prep/
+notes/aws_ml_services.md – summary of SageMaker, Rekognition, Comprehend, etc.
+
+practice-exams/exam1.md – practice exam template
+
+README.md – certification study plan
+
+6. capstone-project/
+src/train.py – capstone training script
+
+infra/main.tf – Terraform infra config
+
+monitoring/ – drift detection + logging hooks
+
+demo/app.py – Streamlit/FastAPI demo starter
+
+README.md – capstone overview
+
+7. Top-level README.md
+Roadmap overview + repo organization
+
+🚀 Next Steps
+Unzip/clone the repo skeleton into your GitHub workspace.
+
+Initialize GitHub Actions workflows (already scaffolded in nlp-project and capstone-project).
+
+Start Week 1 notebooks in ml-foundations/notebooks.
+
+Document weekly progress in each folder’s README.
