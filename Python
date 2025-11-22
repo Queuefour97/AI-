@@ -1,0 +1,82 @@
+# Generating GitHub repo skeleton for 12-week AI Engineer roadmap with AWS emphasis
+
+import os
+
+# Define base directory
+base_dir = "/mnt/data/ai-engineer-roadmap-aws"
+
+# Define folder structure
+folders = {
+    "ml-foundations": ["notebooks", "data", "models"],
+    "computer-vision": ["src", "data", "models"],
+    "nlp-project": ["src", "data", "models", "deployment"],
+    "mlops-pipeline": ["pipeline", "mlflow", "terraform", "scripts"],
+    "aws-cert-prep": ["notes", "practice-exams"],
+    "capstone-project": ["infra", "src", "monitoring", "demo"]
+}
+
+# Define starter files for each folder
+starter_files = {
+    "README.md": "# Project Title\n\nProject description.\n",
+    "requirements.txt": "# Add project dependencies here\n",
+    "train.py": "# Training script placeholder\n",
+    "app.py": "# API endpoint script placeholder\n",
+    "Dockerfile": "# Dockerfile placeholder\n",
+    ".gitignore": "*.pyc\n__pycache__/\n.env\n",
+    "main.tf": "# Terraform main configuration\n",
+    "pipeline.py": "# ML pipeline script placeholder\n"
+}
+
+# Create directories and files
+for folder, subfolders in folders.items():
+    folder_path = os.path.join(base_dir, folder)
+    os.makedirs(folder_path, exist_ok=True)
+    # Create subfolders
+    for sub in subfolders:
+        os.makedirs(os.path.join(folder_path, sub), exist_ok=True)
+    # Add README.md to each main folder
+    with open(os.path.join(folder_path, "README.md"), "w") as f:
+        f.write(f"# {folder.replace('-', ' ').title()}\n\nProject overview.\n")
+
+# Add starter files to appropriate folders
+# ML Foundations
+with open(os.path.join(base_dir, "ml-foundations", "notebooks", "exploratory_analysis.ipynb"), "w") as f:
+    f.write("{}")
+
+# Computer Vision
+with open(os.path.join(base_dir, "computer-vision", "src", "train.py"), "w") as f:
+    f.write("# CNN training script placeholder\n")
+
+# NLP Project
+with open(os.path.join(base_dir, "nlp-project", "src", "train.py"), "w") as f:
+    f.write("# NLP fine-tuning script placeholder\n")
+with open(os.path.join(base_dir, "nlp-project", "deployment", "app.py"), "w") as f:
+    f.write("# FastAPI app for NLP model\n")
+with open(os.path.join(base_dir, "nlp-project", "deployment", "Dockerfile"), "w") as f:
+    f.write("# Dockerfile for NLP deployment\n")
+
+# MLOps Pipeline
+with open(os.path.join(base_dir, "mlops-pipeline", "pipeline", "pipeline.py"), "w") as f:
+    f.write("# ML pipeline script\n")
+with open(os.path.join(base_dir, "mlops-pipeline", "terraform", "main.tf"), "w") as f:
+    f.write("# Terraform config\n")
+
+# AWS Cert Prep
+with open(os.path.join(base_dir, "aws-cert-prep", "notes", "aws_ml_services.md"), "w") as f:
+    f.write("# AWS ML Services Summary\n")
+with open(os.path.join(base_dir, "aws-cert-prep", "practice-exams", "exam1.md"), "w") as f:
+    f.write("# Practice Exam 1\n\nQ1:\nA1:\n")
+
+# Capstone Project
+with open(os.path.join(base_dir, "capstone-project", "src", "train.py"), "w") as f:
+    f.write("# Capstone training script\n")
+with open(os.path.join(base_dir, "capstone-project", "infra", "main.tf"), "w") as f:
+    f.write("# Capstone Terraform config\n")
+with open(os.path.join(base_dir, "capstone-project", "demo", "app.py"), "w") as f:
+    f.write("# Streamlit or FastAPI demo app\n")
+
+# Create top-level README
+with open(os.path.join(base_dir, "README.md"), "w") as f:
+    f.write("# AI Engineer 12-Week Roadmap (AWS Emphasis)\n\nThis repository contains structured projects and resources for a 12-week AI Engineer training program with a focus on AWS deployment and MLOps.\n")
+
+print("GitHub repo skeleton created at /mnt/data/ai-engineer-roadmap-aws")
